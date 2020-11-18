@@ -1,0 +1,50 @@
+{
+  "name": "allow-publish-version",
+  "version": "1.0.0-rc.1",
+  "description": "Publish package with allowed versions only",
+  "main": "src/index.js",
+  "bin": "./bin/cli.js",
+  "scripts": {
+    "prepublishOnly": "npm test && npm run lint",
+    "lint": "eslint src bin test",
+    "test": "node test/index.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rumkin/allow-publish-version.git"
+  },
+  "keywords": [
+    "util",
+    "bin",
+    "cli",
+    "npm",
+    "development",
+    "dx",
+    "integrity",
+    "check",
+    "tool",
+    "semver",
+    "release"
+  ],
+  "author": "Paul Rumkin <dev@rumk.in> (https://rumk.in/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rumkin/allow-publish-version/issues"
+  },
+  "homepage": "https://github.com/rumkin/allow-publish-version#readme",
+  "files": [
+    "bin/",
+    "src/",
+    "readme.md"
+  ],
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6",
+    "picomatch": "^2.2.2",
+    "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "@codegoods/eslint-config-base": "^2.3.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.13.0"
+  }
+}

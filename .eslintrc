@@ -1,0 +1,20 @@
+{
+  "extends": ["@codegoods/base"],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 9
+  },
+  "overrides": [
+    {
+      "files": ["bin/*.js"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
